@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        tools:text="当前时间：00:00:00"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="基础Dialog"/>
+
+            <TextView
+                android:id="@+id/tv_popup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:paddingVertical="10dp"
+                android:text="基础PopupWindow"/>
+
+            <TextView
+                android:id="@+id/tv_dialog_no_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="20dp"
+                android:text="禁止返回键关闭的Dialog"/>
+
+            <TextView
+                android:id="@+id/tv_popup_no_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:paddingVertical="10dp"
+                android:text="禁止返回键关闭的PopupWindow"/>
+
+            <TextView
+                android:id="@+id/tv_alert_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="20dp"
+                android:text="AlertDialog-普通提示对话框"/>
+
+            <TextView
+                android:id="@+id/tv_alert_dialog_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="20dp"
+                android:text="AlertDialog-普通列表对话框"/>
+
+            <TextView
+                android:id="@+id/tv_alert_dialog_single_choice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="20dp"
+                android:text="AlertDialog-单选对话框"/>
+
+            <TextView
+                android:id="@+id/tv_alert_dialog_multi_choice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="20dp"
+                android:text="AlertDialog-复选对话框"/>
+
+            <TextView
+                android:id="@+id/tv_bottom_sheet_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="20dp"
+                android:text="BottomSheetDialog"/>
+
+            <EditText
+                android:id="@+id/et_character_picker_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:inputType="textPersonName"
+                android:hint="CharacterPickerDialog"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tv_date_picker_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="20dp"
+                android:text="DatePickerDialog"/>
+
+            <TextView
+                android:id="@+id/tv_material_styled_date_picker_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="20dp"
+                android:text="MaterialStyledDatePickerDialog"/>
+
+            <TextView
+                android:id="@+id/tv_side_sheet_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="20dp"
+                android:text="SideSheetDialog"/>
+
+            <TextView
+                android:id="@+id/tv_time_picker_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="20dp"
+                android:text="TimePickerDialog"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
