@@ -97,13 +97,13 @@ public class MainActivity extends AppCompatActivity {
 
         //基础PopupWindow
         findViewById(R.id.tv_popup).setOnClickListener(v -> {
-            View view = LayoutInflater.from(this).inflate(R.layout.dialog_test, null);
+            View view = LayoutInflater.from(this).inflate(R.layout.popup_test, null);
             TextView tvTitle = view.findViewById(R.id.tv_title);
             TextView tvContent = view.findViewById(R.id.tv_content);
             TextView tvCancel = view.findViewById(R.id.tv_cancel);
             TextView tvOk = view.findViewById(R.id.tv_ok);
 
-            PopupWindow popupWindow = new PopupWindow(view, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
+            PopupWindow popupWindow = new PopupWindow(view, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, true);
 
             tvTitle.setText("标题");
             tvContent.setText("内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容");
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //禁止返回键关闭的PopupWindow
-        View view = LayoutInflater.from(this).inflate(R.layout.dialog_test, null);
+        View view = LayoutInflater.from(this).inflate(R.layout.popup_test, null);
         TextView tvTitle = view.findViewById(R.id.tv_title);
         TextView tvContent = view.findViewById(R.id.tv_content);
         TextView tvCancel = view.findViewById(R.id.tv_cancel);
@@ -166,6 +166,19 @@ public class MainActivity extends AppCompatActivity {
         });
         findViewById(R.id.tv_popup_no_cancel).setOnClickListener(v -> {
             noCancelPopupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+        });
+
+
+
+        //location popupWindow
+        TextView tvPopupLocation = findViewById(R.id.tv_popup_location);
+        tvPopupLocation.setOnClickListener(v -> {
+            View locationView = LayoutInflater.from(this).inflate(R.layout.popup_location_test, null);
+            PopupWindow locationPopup = new PopupWindow(locationView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
+            //立刻计算一次locationView的宽高
+            locationView.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED), View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+            Log.e(TAG, "width:" + locationView.getMeasuredWidth());
+            locationPopup.showAsDropDown(tvPopupLocation, -locationView.getMeasuredWidth(), 0, Gravity.END);
         });
 
 

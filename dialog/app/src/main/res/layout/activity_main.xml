@@ -72,6 +72,17 @@
                 android:text="禁止返回键关闭的PopupWindow"/>
 
             <TextView
+                android:id="@+id/tv_popup_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:paddingVertical="10dp"
+                android:text="局部位置显示-显示在该控件的右下方"/>
+
+            <TextView
                 android:id="@+id/tv_alert_dialog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
